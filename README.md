@@ -7,7 +7,7 @@ An SMS LLM assistant that leverages the Twilio API, OpenAI's various models via 
  - Twilio API and SMS number - https://www.twilio.com/en-us/messaging/channels/sms
  - OpenAI API - https://platform.openai.com/
  - SerpAPI API - https://serpapi.com/
- - VM with Public IP - https://www.vultr.com/products/cloud-compute/
+ - Ubuntu VM with Public IP - https://www.vultr.com/products/cloud-compute/
  - A Domain with Certbot Setup
  - An A Record from your domain pointing at the VM's Public IP
 
