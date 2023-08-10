@@ -3,8 +3,8 @@ Description=Improbability SMS Assistant
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/python3 /opt/improbability/app.py
-WorkingDirectory=/opt/improbability
+ExecStart=/usr/bin/python3 /opt/improbability/sms-assistant/app.py
+WorkingDirectory=/opt/improbability/sms-assistant/
 User=root
 Group=root
 EnvironmentFile=/etc/improbability/exports
