@@ -1,0 +1,15 @@
+[Unit]
+Description=Improbability SMS Assistant
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/improbability/app.py
+WorkingDirectory=/opt/improbability
+User=root
+Group=root
+EnvironmentFile=/etc/improbability/exports
+PassEnvironment=OPENAI_API_KEY TWILIO_ACCOUNT_SID TWILIO_AUTH_TOKEN TWILIO_PHONE_NUMBER DB_USER DB_PASSWORD DB_NAME SERP_API_KEY
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
