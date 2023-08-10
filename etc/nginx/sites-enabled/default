@@ -1,0 +1,29 @@
+server {
+    server_name sms.improbability.io;
+    client_max_body_size 100M;  # Allow uploads up to 100MB
+
+    location / {
+        proxy_pass http://localhost:5000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    location ~ /.well-known {
+        allow all;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/sms.improbability.io/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/sms.improbability.io/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+    listen 80;
+    server_name sms.improbability.io;
+
+    location / {
+        return 301 https://$host$request_uri;
+    }
+}
