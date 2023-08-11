@@ -1,5 +1,7 @@
 # llm-sms-assistant
-An SMS LLM assistant that leverages the Twilio API, OpenAI's various models via API, and Google via SERP API to process and respond to queries with real-time information retrieval. Built with Python on Ubuntu, utilizing MySQL for data management.
+The SMS LLM assistant is a powerful Flask web application, built on Ubuntu with Python, that acts as an intelligent SMS responder. Utilizing the Twilio API, it efficiently manages both incoming and outgoing SMS messages, allowing users to query information through a simple text interface. In combination with OpenAI's API models, the application offers natural language processing and conversation generation, crafting automated replies based on users' specific questions and needs. Furthermore, Google's SERP API enables the system to extract answers directly from search engine results, broadening its information base.
+
+Designed with a meticulous focus on real-time information retrieval, the SMS LLM assistant performs immediate data processing and validation. When a query is received, the application swiftly extracts the user's phone number and message content. Relevant data, such as user history and assistant information, is retrieved from a MySQL database, ensuring personalized and contextual responses. Through its complex integration with third-party APIs like Twilio, OpenAI, and SERP, the system provides dynamic and intelligent conversation, all while maintaining robust data management capabilities. Whether it's a quick answer from the web or a more personalized interaction, the SMS LLM assistant handles it all in real time, providing a seamless and versatile user experience.
 
 
 # Requirements:
